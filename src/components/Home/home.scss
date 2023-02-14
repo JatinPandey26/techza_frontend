@@ -1,0 +1,104 @@
+$__color_primary_blue : #3182ce;
+$__color_primary_pink : #D53F8C;
+
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 100vw !important;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    // width: 100vw !important;
+
+    
+
+    >.stack {
+        width: 100% !important;
+        gap: 1rem;
+        
+        @media screen and (max-width:805px) {
+            flex-direction: column;
+        }
+    }
+}
+
+.imageContainer {
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.hometitlepic {
+    object-fit: contain;
+    filter: drop-shadow(0 30px 10px rgba(133, 130, 130, 0.281));
+    animation: vectorAnimation 1s infinite ease-in-out alternate;
+}
+
+@keyframes vectorAnimation {
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+.brandBox {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    // width: 100vw;
+}
+
+.brandsBanner>svg {
+    font-size: 3rem;
+    color: white;
+
+    &:hover{
+        scale:1.3;
+        transition: 0.1s ease-in-out;
+    }
+}
+
+.brandsBanner>svg:hover:nth-child(even) {
+    color: $__color_primary_blue;
+}
+
+.brandsBanner>svg:hover:nth-child(odd) {
+    color: $__color_primary_pink;
+}
+
+.videoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    width: 100vw;
+
+    >video {
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        width: 60%;
+        outline: none;
+        box-shadow: -10px 20px 10px rgba(94, 92, 92, 0.452);
+
+        @media screen and (max-width : 500px) {
+            width: 80%;
+        }
+    }
+}
